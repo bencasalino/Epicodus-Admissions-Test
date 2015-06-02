@@ -1,0 +1,93 @@
+<!-- HTML --> 
+  <!DOCTYPE html>
+  <html>
+<!-- Head -->
+  		<head>
+    		<title>Ping Ping Test - Ben Casalino  </title>
+                <meta charset="UTF-8">
+                <meta name="Ben Casalino" content="Ping Pong Test">
+    			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    			<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    			<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    			<link href="styles.css" rel="stylesheet">
+		  </head>
+    <!-- Head-END -->
+<!-- Body-->
+	<body>
+        <div class="container-fluid"> 
+        <p> <center>  <h3> Ping Pong Test </h3></center> </p>
+        <hr> 
+        <br>
+        <div>
+        <p>The Ping-Pong test is a programming test that makes sure you understand how to use loops, conditionals, and variables. The challenge is to simply make a web page where the user is prompted to enter a number, and then the page displays every number up to that number. But, for multiples of three, the page prints "ping" instead of the number, and for multiples of five, the page prints "pong". For numbers that are multiples of three and five, the page prints "ping-pong".</p>
+        <hr>
+        <br>
+        <p class="lead">  Here's an example: </p> 
+      
+        <!-- END Instructions --> 
+
+<!-- form/label-->
+ <form id="pingpong">
+        <label for="pingpongFinalAnswer"> </label> 
+        <input type="number" class="form-control" id="pingpongFinalAnswer" placeholder="Enter a number">
+    </form>
+    <br> <!-- space needed between form and submit button-->
+    <button class="btn btn-success" onclick="myFunction()">Go <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> </span></button>
+    <br> 
+    <br>
+    <p> Answer displayed below:   <h5> <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"> </h5></span>
+        <!-- show results --> 
+        <section> <ul class="list-unstyled" id="results"></ul> </section>
+        <!-- result will show up inder this section --> 
+        <br><br>
+
+<!-- Script start -->
+    <script>
+        function myFunction() {
+            // variables
+            // returns reference to the elemend by Id
+            var x = document.getElementById("pingpong");
+            // number that 
+            var num = x.elements[0].value;
+            
+            // variable used to label 
+            var listItems = "";
+            // intiger
+            var i;
+            for (i = 1; i <= num; i++) 
+            {
+                // equation for ping-pong rule
+                listItems += "<li>";
+                if ((i % 3 === 0) && (i % 5 === 0)) {
+                    listItems += "<b>ping-pong</b>";
+                }
+                // equation for ping rule
+                else if (i % 3 === 0) {
+                    listItems += "<b>ping</b>";
+                }
+                // equation for pong rule
+                else if (i % 5 === 0) {
+                    listItems += "<b>pong</b>";
+                }
+                // needed 
+                else {
+                    listItems += i;
+                }
+
+                listItems += "</li>";
+
+            }
+            // shows the results
+            document.getElementById("results").innerHTML = listItems;
+        }
+    </script>
+<!-- end script --> 
+<hr>
+<br>
+<!--END content-->
+<!--  javascript/jQuery/footer/end body/end html -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </body>
+<!--  end body -->
+</html>
