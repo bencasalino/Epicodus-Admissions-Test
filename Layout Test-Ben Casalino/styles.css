@@ -1,0 +1,22 @@
+.body {
+	background-color: black;
+}
+
+.headline{
+	background-color: #E4E4E4;
+	padding: 10px;
+}
+.nav {
+	background-color: #FF5050;
+	padding: 10px;
+}
+
+.col-1 {
+	background-color: #00FF99;
+	padding: 20px;
+}
+
+.col-2 {
+	background-color: #66CCFF;
+	padding: 20px;
+}
